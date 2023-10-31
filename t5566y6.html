@@ -4,7 +4,6 @@
     <title>Player</title>
 </head>
 <body>
-    <meta name="referrer" content="no-referrer">
     <div id="player"></div>
     <script src="https://cdn.jsdelivr.net/npm/clappr@latest/dist/clappr.min.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/level-selector@latest/dist/level-selector.min.js"></script>
@@ -13,10 +12,9 @@
 
     <script>
         // Inserisci il link referer desiderato qui
-        var referer = 'https://hokutoandfriends565.redirectme.net/';
-
+var referrer = document.referrer;
+if (referrer.indexOf('https://hokutoandfriends565.redirectme.net')
         // Controlla se il referer corrente corrisponde a quello desiderato
-        if (document.referrer === referer) {
      var player = new Clappr.Player({
         source: 'https://linear311-it-dash1-prd-akp2.cdn13.skycdp.com/016a/31917/FHD/skysport251/master_stereo.mpd',
         mimeType: 'application/dash+xml',
